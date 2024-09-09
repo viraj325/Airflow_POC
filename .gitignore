@@ -1,3 +1,6 @@
 logs
 /logs
 .logs
+Materials/dags/__pycache__
+.Materials/dags/__pycache__
+/Materials/dags/__pycache__
