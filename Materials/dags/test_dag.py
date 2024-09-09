@@ -2,25 +2,27 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
 from datetime import datetime, timedelta
-from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperator
-from kubernetes.client import models as k8s
+#from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperator
+#from kubernetes.client import models as k8s
 
-k = KubernetesPodOperator(
-    name="hello-dry-run",
-    image="debian",
-    cmds=["bash", "-cx"],
-    arguments=["echo", "10"],
-    labels={"foo": "bar"},
-    task_id="dry_run_demo",
-    do_xcom_push=True,
-)
+# k = KubernetesPodOperator(
+#     name="hello-dry-run",
+#     image="debian",
+#     cmds=["bash", "-cx"],
+#     arguments=["echo", "10"],
+#     labels={"foo": "bar"},
+#     task_id="dry_run_demo",
+#     do_xcom_push=True,
+# )
 
 with DAG(dag_id="test_dag",
          start_date=datetime(2023,10,11),
          schedule_interval=timedelta(hours=24),
          catchup=False) as dag:
     
-    k.dry_run()
+    print("Hello")
+    
+    # k.dry_run()
 
 
 # example_k8_operator = KubernetesPodOperator(

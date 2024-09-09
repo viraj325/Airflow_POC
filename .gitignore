@@ -4,3 +4,7 @@ logs
 Materials/dags/__pycache__
 .Materials/dags/__pycache__
 /Materials/dags/__pycache__
+/Airflow/Materials/logs/dag_processor_manager/dag_processor_manager.log
+/Airflow/Materials/dags/__pycache__/test_dag.cpython-37.pyc
+.dag_processor_manager.log
+.test_dag.cpython-37.pyc
